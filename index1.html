@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhoneSpecs</title>
+    <link rel="stylesheet" href="style1.css"
+</head>
+<body>
+
+    <div class="logo">
+        <span class="putih"><h1>PHONE</h1></span>
+        <span class="merah"><h1>SPECS</h1></span>
+    </div>
+
+    <div class="tab">
+        <div class="menu active" onclick="showMenu('home')">Home</div>
+        <div class="menu" onclick="showMenu('about')">About</div>
+        <div class="menu" onclick="showMenu('menu')">Menu</div>
+        <div class="menu" onclick="showMenu('search')">Search</div>
+        <div class="menu" onclick="login()">Sign Up</div>
+    </div>
+
+    <div id="home" class="content">
+        <h1 id="welcome"></h1>
+        <div class="page">
+            <div class="judul">
+            <img src="Xiaomi-New-Logo.png" height="150" width="300">
+            </div>
+        <div class="main-page">
+            <div class="display" onclick="pageMove()"><img src="xiaomi-12t-.jpg">
+            <h3>Xiaomi 12T</h3>
+            
+            </div>
+            <div class="display"><img src="xiaomi-13t.jpg">
+                <h3>Xiaomi 13T</h3>
+            </div>
+            <div class="display"><img src="xiaomi-14.jpg">
+                <h3>Xiaomi 14</h3>
+            </div>
+            <div class="display"><img src="xiaomi-14-pro.jpg">
+                <h3>Xiaomi 14 Pro</h3>
+            </div>
+        </div>
+        </div>
+    </div>
+    <div id="about" class="content hidden">
+        <h2>About Us</h2>
+    </div>
+    <div id="menu" class="content hidden">
+        <h2>Menu</h2>
+    </div>
+    <div id="search" class="content hidden">
+        <h2>Search</h2>
+    </div>
+
+<script>
+    
+    function pageMove(){
+            window.location.href = "xiaomi12t.html";
+        }
+
+    function login() {
+        let username = prompt("Sign Up Username : ");
+        let password = prompt("Sign Up Password : ");
+        if (username != null && username != "" && password != null && password != ""){
+        let user = username;
+        let pass = password;
+
+        alert("Sign Up Success");
+       let konfirmasi = confirm("Do you want to continue login?");
+        if(konfirmasi){
+        let loginUser = prompt("Login Username : ");
+        let loginPassword = prompt("Login Password : ");
+        
+        if(loginUser == user && loginPassword == pass){
+            document.getElementById("welcome").textContent = "Welcome to Our Website, "+loginUser+".";
+            document.getElementById("welcome").style.display = "block";
+        }
+        else if(loginUser == user || loginPassword == pass){
+            if(loginUser != user && loginPassword == pass){
+                alert("Wrong Username");
+            }
+            else if(loginUser == user && loginPassword != pass){
+           alert("Wrong Password");
+            } 
+        }
+        else {
+            alert("<p>Wrong Password and Username </p>");
+        }
+    } else {
+        alert("Login Failed");
+    }
+    } else {
+        alert("Sign Up Failed");
+    }
+    }
+
+    function showMenu(menuId) {
+        const menus = document.querySelectorAll('.menu');
+        menus.forEach(menu => {
+            menu.classList.remove('active');
+        });
+        const contents = document.querySelectorAll('.content');
+        contents.forEach(content =>{
+            if(content.id === menuId){
+                content.classList.remove('hidden');
+            } else {
+                content.classList.add('hidden');
+            }
+        });
+        const activeMenu = document.getElementById(menuId);
+        activeMenu.classList.add('active');
+    }
+</script>
+
+</body>
+</html>

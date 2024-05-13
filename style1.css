@@ -1,0 +1,148 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(77, 74, 74);
+}
+
+.logo {
+    display: flex;
+    background-color: rgb(43, 39, 39);
+    padding: 25px;
+    justify-content: center;
+    font-size: 48;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-transform: uppercase;
+    margin-top: 0px;
+
+}
+
+.putih {
+    color: white;
+    font-style: oblique;
+    text-decoration: overline 3px red;
+}
+
+.merah {
+    padding-top: 20px;
+    color: red;
+    font-style: oblique;
+    text-decoration: underline 3px  white;
+}
+
+.tab {
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    padding: 10px 0;
+}
+
+.menu {
+    color: orange;
+    padding: 10px 30px;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.3s ease;
+    font-weight: lighter;
+}
+
+.menu:hover {
+    border-bottom: 2px solid #333;
+}
+
+.menu.active {
+    border-bottom: 2px solid #333;
+    font-weight: bold;
+}
+
+.content {
+    padding: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+.page {
+    flex-direction: column;
+    display: flex;
+    width: 1400px;
+    height: 600px;
+    margin: auto;
+    margin-top: 50px;
+    padding: auto;
+    column-gap: 1px;
+    justify-content: center;
+    box-sizing: border-box;
+    background-color: black;
+    border-radius: 30px;
+}
+
+.main-page {
+    display: flex;
+    width: 1400px;
+    padding-top: 15px;
+    padding: auto;
+    justify-content: center;
+    background-color: black;
+    border-radius: 30px;
+}
+
+.judul {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 0px;
+    margin-bottom: 10px;
+}
+
+.judul img {
+    height: 150px;
+    width: 300px;
+}
+
+.display {
+    
+    display: flex;
+    width: 192px;
+    height: 295px;
+    flex-wrap: wrap;
+    justify-content: center;
+    order: 1;
+    margin: 4%;
+    margin-top: 0%;
+    margin-bottom: 30px;
+    padding: 10px;
+    padding-bottom: 5px;
+    border: 5px solid rgb(61, 60, 56);
+    border-radius: 30px;
+    background-color: white;
+    text-align: center;
+    font-weight: bold;
+    /*transition: 0.3s ease;*/
+}
+
+/*@keyframes animasi {
+    0% { transform: translate(0, 0);}
+    50% {transform: translate(10px, 10px);}
+    100% {transform: translate(0, 0);}
+}*/
+
+@media only screen and (max-width: 600px){
+
+}
+
+.display:hover {
+    /*transform: scale3d(1.1);*/
+    border: 5px solid orange;
+    animation: animasi 2s ;
+
+}
+
+#welcome{
+    display: none;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 300%;
+}

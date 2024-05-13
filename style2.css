@@ -1,0 +1,117 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(77, 74, 74);
+}
+
+.logo {
+    display: flex;
+    background-color: rgb(43, 39, 39);
+    padding: 25px;
+    justify-content: center;
+    font-size: 48;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-transform: uppercase;
+    margin-top: 0px;
+
+}
+
+.putih {
+    color: white;
+    font-style: oblique;
+    text-decoration: overline 3px red;
+}
+
+.merah {
+    padding-top: 20px;
+    color: red;
+    font-style: oblique;
+    text-decoration: underline 3px  white;
+}
+
+.tab {
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    padding: 10px 0;
+}
+
+.menu {
+    color: orange;
+    padding: 10px 30px;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.3s ease;
+    font-weight: lighter;
+}
+
+.menu:hover {
+    border-bottom: 2px solid #333;
+}
+
+.menu.active {
+    border-bottom: 2px solid #333;
+    font-weight: bold;
+}
+
+.content {
+    padding: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 40px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.photo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 300px;
+    margin: 0 auto;
+}
+
+.photo img {
+    max-width: 100%;
+    height: auto;
+}
+
+.photo h3 {
+    text-align: center;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    width: 300px;
+}
+
+th {
+    background-color: #e2e1e1;
+    color: #1a1616;
+    font-weight: bold;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
